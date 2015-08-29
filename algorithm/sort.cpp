@@ -1,11 +1,10 @@
 #include<iostream>
 
 
-void bubble_sort(int* a,size_t n)
+void selection_sort(int* a,size_t n)
 {
   for(int i=0;i<n-1;i++)
   {
-      //std::cout << a[i];
       for(int j=i+1;j<n;j++)
       {
           if(a[i]>a[j])
@@ -15,10 +14,23 @@ void bubble_sort(int* a,size_t n)
 
 }
 
+void bubble_sort(int*a,size_t n)
+{
+   for(int i=n-1;i>0;i--)
+   {
+    for(int j=0;j<i;j++)
+    {
+     if(a[j]>a[j+1])
+       std::swap(a[j],a[j+1]);
+    }  
+   }
+}
+
 void dump(int a[],size_t n)
 {
     for(int i=0;i<n;i++)
-        std::cout << a[i]<< std::endl;
+        std::cout << a[i]<< " ";
+   std::cout << std::endl;
 }
 int main()
 {
