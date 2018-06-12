@@ -1,6 +1,6 @@
 #include<iostream>
 
-
+aaaaaa
 int main()
 {
     int *ptr;
